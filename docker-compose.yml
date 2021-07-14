@@ -1,0 +1,10 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  common:
+    image: renesat/raai_tracking:common
+    build: Docker/common
+  pytracking:
+    image: renesat/raai_tracking:common
+    build: Docker/pytracking
+volumes:
+  logvolume01: {}
