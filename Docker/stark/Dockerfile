@@ -11,9 +11,11 @@ WORKDIR /workspace
 
 
 USER $DOCKER_USER
-RUN git clone --recurse-submodules "https://github.com/visionml/pytracking"
-COPY install.sh /workspace/pytracking
-RUN cd /workspace/pytracking && \
-    bash install.sh ~/miniconda3 pytracking
+RUN git clone "https://github.com/researchmm/Stark"
+RUN cd /workspace/Stark && \
+    . ~/miniconda3/etc/profile.d/conda.sh && \
+    conda create -y -n stark python=3.6 && \
+    conda activate stark && \
+    bash install.sh
 
 RUN mkdir /workspace/data

@@ -127,6 +127,7 @@ python -c "from pytracking.evaluation.environment import create_default_local_fi
 python -c "from ltr.admin.environment import create_default_local_file; create_default_local_file()"
 
 
+
 echo ""
 echo ""
 echo "****************** Installing jpeg4py ******************"
@@ -147,3 +148,6 @@ echo ""
 echo ""
 echo "****************** More networks can be downloaded from the google drive folder https://drive.google.com/drive/folders/1WVhJqvdu-_JG1U-V0IqfxTUa1SBPnL0O ******************"
 echo "****************** Or, visit the model zoo at https://github.com/visionml/pytracking/blob/master/MODEL_ZOO.md ******************"
+
+echo "***** Install ROS ****"
+conda install -y -c conda-forge rospkg

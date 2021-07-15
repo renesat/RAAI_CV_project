@@ -4,7 +4,14 @@ services:
     image: renesat/raai_tracking:common
     build: Docker/common
   pytracking:
-    image: renesat/raai_tracking:common
+    image: renesat/raai_tracking:pytracking
     build: Docker/pytracking
+    volumes:
+      - ./data:/workspace/data:r
+  stark:
+    image: renesat/raai_tracking:stark
+    build: Docker/stark
+    volumes:
+      - ./data:/workspace/data:r
 volumes:
   logvolume01: {}
